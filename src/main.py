@@ -3,7 +3,7 @@ from utils.util import GuessingGameTools
 
 Tool = GuessingGameTools()
 minimum_number = 0
-maximum_number = 100
+maximum_number = 5
 
 ####### Game Logic ###########
 
@@ -20,10 +20,15 @@ class GuessingGame:
         print(f"\t\t\t\tDear {self.player_name} welcome to this game!!")
 
     def play(self):
-        while True:
+        command = ""
+        while command != "quit":
             secret_number = Tool.generat_random_number(min=minimum_number, max=maximum_number)
             print(secret_number)
-            break
+            command = input(">> ").lower()
+            if int(command) == secret_number:
+                Tool.show_congra(name=self.player_name)
+                break
+            
 
 
 

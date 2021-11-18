@@ -24,4 +24,9 @@ class GuessingGameTools:
         print(f"""
             $$$$ YOU CAN GUESS ANY INTEGER NUMBER from ({min}) to ({max}) $$$$
         """)
+
+    def show_congra(self, name):
+        print(f"""
+            !!! Congrats {name} YOU WON !!!
+        """)
 ####### Game Logic Tool Ends ###########
